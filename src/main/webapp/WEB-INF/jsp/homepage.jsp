@@ -13,14 +13,16 @@
 
 		<table border="1">
 			<c:forEach var="park" items="${parks}">
-
+				<c:url value="/parkdetail" var="parkHref">
+				<c:param name="parkcode" value="${park.parkcode}" />
+		</c:url>
 				<tr>
 					<td><c:url var="parkImg" value="/img/parks/${park.parkcode}" />
-						<a href="parkdetail"><img
+						<a href="${parkHref}"><img
 							src="img/parks/${park.parkcode.toLowerCase()}.jpg" /></a></td>
 					<td>${park.parkname}</td>
 					<td>${park.state}</td>
-					<td>${park.parkdescription} <a href="parkdetail">Click here for more info.</a></td>
+					<td>${park.parkdescription} <a href="${parkHref}">Click here for more info.</a></td>
 				</tr>
 			</c:forEach>
 

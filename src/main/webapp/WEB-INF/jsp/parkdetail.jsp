@@ -9,11 +9,10 @@
 </head>
 <body>
 	<div id="main_content">
-		<h1>Welcome to ${"param.parkname"}</h1>
+		<h1>Welcome to ${param.parkname}</h1>
 		<div>image</div>
 		<div>parkname</div>
-		<div>park data</div>
-		<div>weather</div>
+	
 		
 
 		<%-- <a href="notificationSignupInput"><img alt="I Want Awesome Button" src="img/button.png"></a> --%>
