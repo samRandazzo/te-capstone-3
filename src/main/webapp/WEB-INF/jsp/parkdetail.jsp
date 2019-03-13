@@ -8,12 +8,30 @@
 <%-- <link rel="stylesheet" href="css/site.css"></link> --%>
 </head>
 <body>
+
 	<div id="main_content">
-		<h1>Welcome to ${parkname}</h1>
-		<div>image</div>
-		<div>parkname</div>
-	
-		
+		<h2>
+			<p><c:out value="${park.parkname}" /><c:out value="${park.state}"/></p>
+		</h2>
+		<div id="img">
+			<c:url var="parkImg"
+				value="/img/parks/${park.parkcode.toLowerCase()}.jpg" />
+			<img src="${parkImg}" />
+		</div>
+
+		<div id="parkInfo">
+			<p>Acreage: <c:out value="${park.acreage}"/></p>
+			<p>Elevation in Feet: <c:out value="${park.elevationinfeet}"/></p>
+			<p>Miles of Trail: <c:out value="${park.milesoftrail}"/></p>
+			<p>Number of Campsites: <c:out value="${park.numberofcampsites}"/></p>
+			<p>Climate: <c:out value="${park.climate}"/><p>
+			<p>Year Founded: <c:out value="${park.yearfounded}"/></p>
+			<p>Annual Visitor Count: <c:out value="${park.annualvisitorcount}"/></p>
+			
+		</div>
+		<div></div>
+		<div></div>
+
 
 		<%-- <a href="notificationSignupInput"><img alt="I Want Awesome Button" src="img/button.png"></a> --%>
 	</div>
