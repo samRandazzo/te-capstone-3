@@ -27,6 +27,10 @@
 			<p>Climate: <c:out value="${park.climate}"/><p>
 			<p>Year Founded: <c:out value="${park.yearfounded}"/></p>
 			<p>Annual Visitor Count: <c:out value="${park.annualvisitorcount}"/></p>
+			<p>Inspirational Quote: <c:out value="${park.inspirationalquote}"/> -<c:out value="${park.inspirationalquotesource}"/></p>
+			<p>Park Description: <c:out value="${park.parkdescription}"/></p>
+			<p>Entry Fee: $<c:out value="${park.entryfee}"/></p>
+			<p>Number of Animal Species: <c:out value="${park.numberofanimalspecies}"/></p>
 			
 		</div>
 		<div></div>
