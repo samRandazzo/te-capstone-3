@@ -8,4 +8,6 @@ public interface ParkDAO {
 	
 	List<Park> getAllParks();
 
+	Park getParkByParkCode(String parkcode);
+
 }

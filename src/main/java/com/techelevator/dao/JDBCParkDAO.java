@@ -26,7 +26,8 @@ public class JDBCParkDAO implements ParkDAO {
 	public List<Park> getAllParks() {
 
 		List<Park> parks = new ArrayList<Park>();
-		String sqlQueryString = "SELECT * FROM park;";
+		String sqlQueryString = "SELECT * FROM park "
+				+ "ORDER BY parkname;";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlQueryString);
 		Park thePark;
 		while (results.next()) {
@@ -35,6 +36,19 @@ public class JDBCParkDAO implements ParkDAO {
 		}
 
 		return parks;
+	}
+	
+
+
+	@Override
+	public Park getParkByParkCode(String parkCode) {
+		Park park = null;
+		String sqlSelectParkByParkCode = "SELECT * FROM park WHERE parkcode=?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectParkByParkCode, parkCode);
+		if(results.next()) {
+			park = mapRowToPark(results);
+		}
+		return park;
 	}
 
 	private Park mapRowToPark(SqlRowSet results) {
@@ -57,5 +71,7 @@ public class JDBCParkDAO implements ParkDAO {
 		return thePark;
 
 	}
+
+	
 
 }

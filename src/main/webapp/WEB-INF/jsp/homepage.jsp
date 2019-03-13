@@ -16,11 +16,11 @@
 
 				<tr>
 					<td><c:url var="parkImg" value="/img/parks/${park.parkcode}" />
-						<a href="${parkImg}"><img
+						<a href="parkdetail"><img
 							src="img/parks/${park.parkcode.toLowerCase()}.jpg" /></a></td>
 					<td>${park.parkname}</td>
 					<td>${park.state}</td>
-					<td>${park.parkdescription}</td>
+					<td>${park.parkdescription} <a href="parkdetail">Click here for more info.</a></td>
 				</tr>
 			</c:forEach>
 
