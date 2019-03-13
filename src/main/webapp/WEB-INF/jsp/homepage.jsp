@@ -8,15 +8,22 @@
 	</head>
 	<body>
 		<div id="main_content">
-			<%-- <h1>Do you want to be more Awesome?</h1>
-			<p>Of course you do!  Everyone wants more <strong>awesomeness</strong> in their life!  Well, guess what you lucky stiff?  Your desire for more awesomeness is about to be <strong>fulfilled</strong>!  Just do the following:</p>
-			<ol>
-				<li>Grab your mouse (or other pointing device of choice)</li>
-				<li>Assure yourself that you deserve to <strong>be more awesome</strong></li>
-				<li><strong>Click the green button</strong></li>
-				<li>Provide your name and email address and we'll let you know when it's time to <strong>unveil the awesomeness</strong></li>
-			</ol>--%>
+		<h1>National Parks Homepage</h1>
+
+			<table border="1">
+			<c:forEach var="park" items="${parks}">
+			<tr>
+				<td>${park.parkname}</td>
+				<td>${park.state}</td>
+				<td>${park.parkdescription}</td>
+
+			</tr>
+		</c:forEach>
 			
+			
+			
+			
+			</table>
 			<%-- <a href="notificationSignupInput"><img alt="I Want Awesome Button" src="img/button.png"></a> --%>
 		</div>
 	</body>

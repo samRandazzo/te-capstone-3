@@ -2,7 +2,7 @@ package com.techelevator.model;
 
 public class Park {
 
-	private long parkcode;
+	private String parkcode;
 	private String parkname;
 	private String state;
 	private int acreage;
@@ -18,11 +18,11 @@ public class Park {
 	private int entryfee;
 	private int numberofanimalspecies;
 
-	public long getParkcode() {
+	public String getParkcode() {
 		return parkcode;
 	}
 
-	public void setParkcode(long parkcode) {
+	public void setParkcode(String parkcode) {
 		this.parkcode = parkcode;
 	}
 
