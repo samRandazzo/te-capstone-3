@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="main_content">
-		<h1>Welcome to ${param.parkname}</h1>
+		<h1>Welcome to ${parkname}</h1>
 		<div>image</div>
 		<div>parkname</div>
 	
