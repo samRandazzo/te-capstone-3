@@ -1,6 +1,7 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+;
+[;iu   hj6trrrfedszyt<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-
+<%@include file="common/header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,11 +34,16 @@
 			<p>Number of Animal Species: <c:out value="${park.numberofanimalspecies}"/></p>
 			
 		</div>
-		<div></div>
+		<div>
+		<p>Click here for the five day forecast!</p>
+		
+		</div>
 		<div></div>
 
 
 		<%-- <a href="notificationSignupInput"><img alt="I Want Awesome Button" src="img/button.png"></a> --%>
 	</div>
 </body>
+<c:import url="/WEB-INF/jsp/common/footer.jsp" />
+
 </html>
