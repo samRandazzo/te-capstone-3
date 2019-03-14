@@ -1,5 +1,9 @@
 package com.techelevator.dao;
 
-public interface WeatherDAO {
+import java.util.List;
 
+import com.techelevator.model.Weather;
+
+public interface WeatherDAO {
+	public List<Weather>getParkWeather(String parkcode);
 }
