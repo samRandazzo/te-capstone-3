@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@include file="common/header.jsp"%>
 
 <!DOCTYPE html>
 <html>
@@ -28,10 +29,16 @@
 					<option value="YNP">Yellowstone National Park</option>
 					<option value="YNP2">Yosemite National Park</option>
 				</select>
+				</form:form>
 		</div>
 		<div id="email_Input">
+<<<<<<< HEAD
 			<label for="emailaddress">Your email: </label>
 			<input type="text" id="email" name="emailaddress" placeholder="enter email here"/>
+=======
+			<label for="email">Your email: </label>
+			<form:input path="email"></form:input>
+>>>>>>> 540fa79a4da9095be33f2dd250307e78575943f3
 		</div>
 		<div id="state_select">
 			<label for="state">State of Residence: </label> <select name="state">
@@ -87,6 +94,7 @@
 				<option value="WY">Wyoming</option>
 
 			</select>
+			
 
 		</div>
 		<div id="activity_level">
@@ -97,8 +105,15 @@
 			Active <input type="submit">
 		</div>
 
+<<<<<<< HEAD
 			</form>
+=======
+
+>>>>>>> 540fa79a4da9095be33f2dd250307e78575943f3
 
 		</div>
+		</div>
 </body>
+<c:import url="/WEB-INF/jsp/common/footer.jsp" />
+
 </html>

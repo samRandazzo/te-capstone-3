@@ -1,5 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@include file="common/header.jsp"%>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -32,5 +35,5 @@
 		</table>
 		<%-- <a href="notificationSignupInput"><img alt="I Want Awesome Button" src="img/button.png"></a> --%>
 	</div>
-</body>
-</html>
+
+<c:import url="/WEB-INF/jsp/common/footer.jsp" />
