@@ -33,5 +33,10 @@ public class SiteController {
 		return "parkdetail";
 	}
 	
+	@RequestMapping(path="/survey", method=RequestMethod.GET)
+	public String displaySurvey() {
+		return "survey";
+	}
+	
 	
 }
