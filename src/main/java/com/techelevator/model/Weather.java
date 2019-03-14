@@ -2,17 +2,17 @@ package com.techelevator.model;
 
 public class Weather {
 
-	private long parkcode;
+	private String parkcode;
 	private int fivedayforecastvalue;
 	private int low;
 	private int high;
 	private String forecast;
 
-	public long getParkcode() {
+	public String getParkcode() {
 		return parkcode;
 	}
 
-	public void setParkcode(long parkcode) {
+	public void setParkcode(String parkcode) {
 		this.parkcode = parkcode;
 	}
 

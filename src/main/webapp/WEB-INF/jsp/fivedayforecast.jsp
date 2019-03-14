@@ -5,15 +5,14 @@
 <body>
 <div><h1>Five Day Weather Forecast</h1></div>
 	<table border="1">
-		<c:forEach var="forecasts" items="${forcast}">
 		<tr>
 		<td>${weather.fivedayforecastvalue}</td>
 		<td>${weather.low}</td>
 		<td>${weather.high}</td>
 		<td>${weather.forecast}</td>
 		</tr>
-		</c:forEach>
+		
 	</table>
 
-</body>
-<%@include file="common/header.jsp"%>
+<c:import url="/WEB-INF/jsp/common/footer.jsp" />
+

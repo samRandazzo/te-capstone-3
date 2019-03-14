@@ -15,30 +15,27 @@
 
 		<div id="park_select">
 			<c:url var="submitSurvey" value="/survey" />
-			<form method="POST" action="${submitSurvey}" modelAttribute="survey"/>
-				<label for="favoritePark">Favorite National Park</label>
-				<select name="parkcode">
-					<option value="CVNP">Cuyahoga Valley National Park</option>
-					<option value="ENP">Everglades National Park</option>
-					<option value="GCNP">Grand Canyon National Park</option>
-					<option value="GNP">Glacier National Park</option>
-					<option value="GSMNP">Great Smoky Mountains National Park</option>
-					<option value="GTNP">Grand Teton National Park</option>
-					<option value="MRNP">Mount Rainier National Park</option>
-					<option value="RMNP">Rocky Mountain National Park</option>
-					<option value="YNP">Yellowstone National Park</option>
-					<option value="YNP2">Yosemite National Park</option>
-				</select>
-				</form:form>
+			<form method="POST" action="${submitSurvey}" modelAttribute="survey" />
+			<label for="favoritePark">Favorite National Park</label> <select
+				name="parkcode">
+				<option value="CVNP">Cuyahoga Valley National Park</option>
+				<option value="ENP">Everglades National Park</option>
+				<option value="GCNP">Grand Canyon National Park</option>
+				<option value="GNP">Glacier National Park</option>
+				<option value="GSMNP">Great Smoky Mountains National Park</option>
+				<option value="GTNP">Grand Teton National Park</option>
+				<option value="MRNP">Mount Rainier National Park</option>
+				<option value="RMNP">Rocky Mountain National Park</option>
+				<option value="YNP">Yellowstone National Park</option>
+				<option value="YNP2">Yosemite National Park</option>
+			</select>
+			
 		</div>
 		<div id="email_Input">
-<<<<<<< HEAD
-			<label for="emailaddress">Your email: </label>
-			<input type="text" id="email" name="emailaddress" placeholder="enter email here"/>
-=======
-			<label for="email">Your email: </label>
-			<form:input path="email"></form:input>
->>>>>>> 540fa79a4da9095be33f2dd250307e78575943f3
+
+			<label for="emailaddress">Your email: </label> <input type="text"
+				id="email" name="emailaddress" placeholder="enter email here" />
+
 		</div>
 		<div id="state_select">
 			<label for="state">State of Residence: </label> <select name="state">
@@ -94,25 +91,21 @@
 				<option value="WY">Wyoming</option>
 
 			</select>
-			
+
 
 		</div>
 		<div id="activity_level">
 			<label for="activitylevel">Activity Level</label> <input type="radio"
 				name="activitylevel" value="inactive">Inactive <input
-				type="radio" name="activitylevel" value="sedentary">Sedentary <input type="radio" name="activitylevel" value="Active">Active
+				type="radio" name="activitylevel" value="sedentary">Sedentary
+			<input type="radio" name="activitylevel" value="Active">Active
 			<input type="radio" name="activitylevel" value="Extremely Active ">Extremely
 			Active <input type="submit">
 		</div>
+</form:form>
 
-<<<<<<< HEAD
-			</form>
-=======
+	</div>
 
->>>>>>> 540fa79a4da9095be33f2dd250307e78575943f3
-
-		</div>
-		</div>
 </body>
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
 
