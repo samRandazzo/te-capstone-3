@@ -16,30 +16,41 @@
 
 
 	<c:url value="/temperature" var="tempHref" />
-		<form action="${tempHref}">
-			<input type="hidden" name="fivedayforecastvalue"
-				value="${fivedayforecastvalue}" /> <input type="hidden"
-				name="parkcode" value="${park.parkcode}" /> <span> <input
-				id="fahrenheit" type="submit" name="tempUnit" value="Fahrenheit" />
-				<input id="celsius" type="submit" name="tempUnit" value="Celsius" />
+	<form action="${tempHref}" />
+	<input type="hidden" name="fivedayforecastvalue"
+		value="${fivedayforecastvalue}" />
+	<input type="hidden" name="parkcode" value="${park.parkcode}" />
+	<span> <input id="fahrenheit" type="submit" name="tempUnit"
+		value="Fahrenheit" /> <input id="celsius" type="submit"
+		name="tempUnit" value="Celsius" />
 
-			</span>
-		</form>
+	</span>
+	</form>
 
-		<c:forEach items="${fivedayforecast}" var="dailyForecast">
+	<c:forEach items="${fivedayforecast}" var="dailyForecast">
 
-			<table border="1">
-				<tr>
-					<td><c:url var="weatherImage"
-							value="/img/weather/${dailyForecast.parsedForecast}.png" /> <img
-						src="${weatherImage}" />
-					<td><c:out value="${dailyForecast.high}" /></td>
-					<td><c:out value="${dailyForecast.low}" /></td>
-
-				</tr>
-
-			</table>
+		<table border="1">
+			<tr>
+				<td><c:url var="weatherImage"
+						value="/img/weather/${dailyForecast.parsedForecast}.png" /> <img
+					src="${weatherImage}" /> 
+						<c:choose>
+						<c:when test="${celsius == true}">
+							<td><c:out value="${(dailyForecast.high - 32) / 1.8}" /></td>
+							
+							<td><c:out value="${(dailyForecast.low - 32) / 1.8}" /></td>
+							
+							</c:when>
+							<c:otherwise>
+							<td><c:out value="${dailyForecast.high}" /></td>
+							
+							<td><c:out value="${dailyForecast.low}" /></td>
+							</c:otherwise>
+			
+			</c:choose>
+			</tr>
+		</table>
 
 
 	</c:forEach>
-		<c:import url="/WEB-INF/jsp/common/footer.jsp" />
+	<c:import url="/WEB-INF/jsp/common/footer.jsp" />
