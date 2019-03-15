@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-; [;iu hj6trrrfedszyt<%@ taglib uri="http://java.sun.com/jsp/jstl/core"
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"
 	prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-=======
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
->>>>>>> d5c5478c21cc6f76dcdf883a6d80def18688e22a
 <%@include file="common/header.jsp"%>
 	<div id="main_content">
 		<h2>
@@ -74,7 +70,6 @@
 				<c:param name="parkcode" value="${park.parkcode}" />
 			</c:url>
 			<a id="fiveDayforecastbutton" href="${forecastHref}">See 5 Day Forecast</a>
-=======
 			<p>Acreage: <c:out value="${park.acreage}"/></p>
 			<p>Elevation in Feet: <c:out value="${park.elevationinfeet}"/></p>
 			<p>Miles of Trail: <c:out value="${park.milesoftrail}"/></p>
