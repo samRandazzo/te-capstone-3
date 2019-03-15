@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <%@include file="common/header.jsp"%>
 <head>
@@ -12,45 +12,34 @@
 			<c:out value="${park.parkname}" />
 		</h1>
 	</div>
-<<<<<<< HEAD
-	<c:forEach items="${fivedayforecast}" var="dailyForecast">		
-		<table border="1">
-			<tr>
-				<td><c:url var="weatherImage"
-						value="/img/weather/${dailyForecast.parsedForecast}.png" />
-					<img src="${weatherImage}" />
-				<td><c:out value="${dailyForecast.high}" /></td>
-				<td><c:out value="${dailyForecast.low}" /></td>
-				<td><c:out value="${dailyForecast.weatherMessage}" /></td>
-			</tr>
 
-		</table>
 
-=======
 
 	<c:url value="/temperature" var="tempHref" />
-	<form action="${tempHref}">
-		<input type="hidden" name="fivedayforecastvalue"
-			value="${fivedayforecastvalue}" /> <input type="hidden"
-			name="parkcode" value="${park.parkcode}" /> <span> <input
-			id="fahrenheit" type="submit" name="tempUnit" value="Fahrenheit" /> <input
-			id="celsius" type="submit" name="tempUnit" value="Celsius" />
+		<form action="${tempHref}">
+			<input type="hidden" name="fivedayforecastvalue"
+				value="${fivedayforecastvalue}" /> <input type="hidden"
+				name="parkcode" value="${park.parkcode}" /> <span> <input
+				id="fahrenheit" type="submit" name="tempUnit" value="Fahrenheit" />
+				<input id="celsius" type="submit" name="tempUnit" value="Celsius" />
 
-		</span>
-	</form>
+			</span>
+		</form>
 
-	<c:forEach items="${fivedayforecast}" var="dailyForecast">
+		<c:forEach items="${fivedayforecast}" var="dailyForecast">
 
-		<table border="1">
-			<tr>
+			<table border="1">
+				<tr>
+					<td><c:url var="weatherImage"
+							value="/img/weather/${dailyForecast.parsedForecast}.png" /> <img
+						src="${weatherImage}" />
+					<td><c:out value="${dailyForecast.high}" /></td>
+					<td><c:out value="${dailyForecast.low}" /></td>
 
-				<td><c:out value="${dailyForecast.high}" /></td>
-				<td><c:out value="${dailyForecast.low}" /></td>
+				</tr>
 
-			</tr>
+			</table>
 
-		</table>
 
->>>>>>> 203d0fc62bf1e34616be7a7712bbdbb862b2af98
 	</c:forEach>
-	<c:import url="/WEB-INF/jsp/common/footer.jsp" />
+		<c:import url="/WEB-INF/jsp/common/footer.jsp" />
