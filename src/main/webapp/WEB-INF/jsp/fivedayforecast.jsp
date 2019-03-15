@@ -12,6 +12,7 @@
 			<c:out value="${park.parkname}" />
 		</h1>
 	</div>
+<<<<<<< HEAD
 	<c:forEach items="${fivedayforecast}" var="dailyForecast">		
 		<table border="1">
 			<tr>
@@ -25,5 +26,31 @@
 
 		</table>
 
+=======
+
+	<c:url value="/temperature" var="tempHref" />
+	<form action="${tempHref}">
+		<input type="hidden" name="fivedayforecastvalue"
+			value="${fivedayforecastvalue}" /> <input type="hidden"
+			name="parkcode" value="${park.parkcode}" /> <span> <input
+			id="fahrenheit" type="submit" name="tempUnit" value="Fahrenheit" /> <input
+			id="celsius" type="submit" name="tempUnit" value="Celsius" />
+
+		</span>
+	</form>
+
+	<c:forEach items="${fivedayforecast}" var="dailyForecast">
+
+		<table border="1">
+			<tr>
+
+				<td><c:out value="${dailyForecast.high}" /></td>
+				<td><c:out value="${dailyForecast.low}" /></td>
+
+			</tr>
+
+		</table>
+
+>>>>>>> 203d0fc62bf1e34616be7a7712bbdbb862b2af98
 	</c:forEach>
 	<c:import url="/WEB-INF/jsp/common/footer.jsp" />
