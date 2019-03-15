@@ -32,7 +32,6 @@ public class WeatherController {
 	public String displayFiveDayForecast(@RequestParam String parkcode, ModelMap model){
 		List<Weather> fivedayforecast = weatherDao.getParkWeather(parkcode);
 		model.addAttribute("fivedayforecast", fivedayforecast);
-		
 		Park park = parkDao.getParkByParkCode(parkcode);
 		model.addAttribute("park", park);
 		
