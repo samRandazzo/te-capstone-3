@@ -8,14 +8,10 @@
 	
 	<table border="1">
 		<tr>
-<<<<<<< HEAD
-		<td><c:out value= "${theWeather.high}"/></td>
-		<td><c:out value= "${theWeather.low}"/></td>
-			
-=======
+
 		<td><c:out value= "${dailyForecast.high}"/></td>
 		<td><c:out value= "${dailyForecast.low}"/></td>	
->>>>>>> 42aa2dce4acb4fd51daba9f44ddc65235afb8f9e
+
 		</tr>
 		
 	</table>
