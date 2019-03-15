@@ -42,9 +42,14 @@ public class WeatherController {
 	}
 	
 	@RequestMapping(path="/temperature", method=RequestMethod.GET)
+<<<<<<< HEAD
 	public String setTemperature(@RequestParam String parkcode,  @RequestParam String tempUnit, ModelMap model){
 		model.addAttribute("parkcode", parkcode);
 		
+=======
+	public String setTemperature(@RequestParam String parkcode, @RequestParam String tempUnit, ModelMap model){
+		model.addAttribute("parkcode", parkcode);
+>>>>>>> eced1a56ca39b13b8652950cf61481a85d7393eb
 	
 		if(tempUnit.equals("Fahrenheit")) {
 			celsius = false;
