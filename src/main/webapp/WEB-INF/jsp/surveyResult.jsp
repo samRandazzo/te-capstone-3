@@ -2,9 +2,7 @@
 <%@include file="common/header.jsp"%>
 
 <table class="topParksTable">
-		<tr> 
-			<th>&nbsp;</th> <th>&nbsp;</th> <th>Number of responses</th>
-		</tr>
+		<h1>Top 25 Favorite Parks</h1>
 	<c:forEach items="${topParks}" var="park">
 
 		<tr> 
