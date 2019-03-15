@@ -6,8 +6,8 @@
 <div><h1>Five Day Weather Forecast For <c:out value="${park.parkname}"/> </h1></div>
 	<table border="1">
 		<tr>
-		<td><c:out value= "${forecast.high}"/></td>
-		<td><c:out value= "${forecast.low}"/></td>
+		<td><c:out value= "${theWeather.high}"/></td>
+		<td><c:out value= "${theWeather.low}"/></td>
 			
 		</tr>
 		
