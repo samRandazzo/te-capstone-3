@@ -42,5 +42,7 @@ public class JDBCWeatherDAO implements WeatherDAO {
 				
 		return forecast;
 	}
+	
+	
 
 }

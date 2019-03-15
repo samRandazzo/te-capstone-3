@@ -1,11 +1,6 @@
 package com.techelevator.controller;
 
-import java.time.LocalDate;
-import java.time.format.TextStyle;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -25,7 +20,7 @@ public class WeatherController {
 	
 	private WeatherDAO weatherDao;
 	private ParkDAO parkDao;
-	private boolean celsius;
+//	private boolean celsius;
 	
 	@Autowired
 	public WeatherController(WeatherDAO weatherDao, ParkDAO parkDao) {

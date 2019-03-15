@@ -1,15 +1,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@include file="common/header.jsp"%>
-<head><title>Forecast BullShiiiit.</title></head>
+<head><title>Forecast.</title></head>
 <body>
-<div><h1>Five Day Weather Forecast</h1></div>
+<div><h1>Five Day Weather Forecast For <c:out value="${park.parkname}"/> </h1></div>
 	<table border="1">
 		<tr>
-		<td>${weather.fivedayforecastvalue}</td>
-		<td>${weather.low}</td>
-		<td>${weather.high}</td>
-		<td>${weather.forecast}</td>
+		<td><c:out value= "${forecast.high}"/></td>
+		<td><c:out value= "${forecast.low}"/></td>
+			
 		</tr>
 		
 	</table>
