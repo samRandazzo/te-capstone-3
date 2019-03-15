@@ -14,7 +14,7 @@ import com.techelevator.model.Weather;
 
 @Component
 public class JDBCWeatherDAO implements WeatherDAO {
-	
+
 	private JdbcTemplate jdbcTemplate;
 
 	@Autowired
@@ -25,17 +25,12 @@ public class JDBCWeatherDAO implements WeatherDAO {
 	@Override
 	public List<Weather> getParkWeather(String parkcode) {
 		List<Weather> theWeather = new ArrayList<Weather>();
-		String  sqlSelectWeather = "SELECT * " + 
-								   "FROM weather " +
-<<<<<<< HEAD
-								   "WHERE parkcode = ?;";
-								   
-=======
-								   "WHERE parkcode = ? ;";
-//								   "ORDER BY fivedayforecastvalue ASC;";
->>>>>>> 203d0fc62bf1e34616be7a7712bbdbb862b2af98
+		String sqlSelectWeather = "SELECT * " + "FROM weather " +
+
+				"WHERE parkcode = ?;";
+
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectWeather, parkcode);
-		while(results.next()) {							
+		while (results.next()) {
 			Weather weather = new Weather();
 			weather.setParkcode(results.getString("parkcode"));
 			weather.setFivedayforecastvalue(results.getInt("fivedayforecastvalue"));
@@ -44,10 +39,8 @@ public class JDBCWeatherDAO implements WeatherDAO {
 			weather.setForecast(results.getString("forecast"));
 			theWeather.add(weather);
 		}
-				
+
 		return theWeather;
 	}
-	
-	
 
 }

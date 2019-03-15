@@ -1,6 +1,10 @@
 header {
 	margin: 0px;
-	background-color: #2f9eec;
+	background-color: black;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	
+	
 }
 
 .npgeekImage {
@@ -11,8 +15,11 @@ header {
 
 nav {
 	margin-top: auto;
-	background-color: #2f9eec;
+	background-color: yellow;
 	padding-bottom: 10px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	
 }
 
 nav table {
