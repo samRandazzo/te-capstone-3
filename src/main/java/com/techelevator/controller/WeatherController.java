@@ -14,13 +14,13 @@ import com.techelevator.dao.WeatherDAO;
 import com.techelevator.model.Park;
 import com.techelevator.model.Weather;
 
-@SessionAttributes
+@SessionAttributes("celsius")
 @Controller
 public class WeatherController {
 	
 	private WeatherDAO weatherDao;
 	private ParkDAO parkDao;
-//	private boolean celsius;
+	private boolean celsius;
 	
 	@Autowired
 	public WeatherController(WeatherDAO weatherDao, ParkDAO parkDao) {
@@ -41,6 +41,19 @@ public class WeatherController {
 		return "fivedayforecast";
 	}
 	
+	@RequestMapping(path="/temperature", method=RequestMethod.GET)
+	public String setTemperature(@RequestParam String parkcode, @RequestParam int fivedayforecastvalue, @RequestParam String tempUnit, ModelMap model){
+		model.addAttribute("parkcode", parkcode);
+		model.addAttribute("fivedayforecastvalue", fivedayforecastvalue);
+	
+		if(tempUnit.equals("Fahrenheit")) {
+			celsius = false;
+		} else {
+			celsius = true;
+		}
+		model.addAttribute("celsius", celsius);
+		return "redirect:/fivedayforecast";
+	}
 
 	
 }
