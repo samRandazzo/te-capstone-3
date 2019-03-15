@@ -1,18 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@include file="common/header.jsp"%>
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>National Parks Survey Page</title>
-<%-- <link rel="stylesheet" href="css/site.css"></link> --%>
-</head>
-<body>
 	<div id="main_content">
 		<h1>National Parks Survey Page</h1>
-
-
 		<div id="park_select">
 			<c:url var="submitSurvey" value="/survey" />
 			<form method="POST" action="${submitSurvey}" modelAttribute="survey" />
@@ -28,14 +17,21 @@
 				<option value="RMNP">Rocky Mountain National Park</option>
 				<option value="YNP">Yellowstone National Park</option>
 				<option value="YNP2">Yosemite National Park</option>
+<<<<<<< HEAD
 			</select>
 			
+=======
+			</select> `
+>>>>>>> d5c5478c21cc6f76dcdf883a6d80def18688e22a
 		</div>
 		<div id="email_Input">
 
 			<label for="emailaddress">Your email: </label> <input type="text"
 				id="email" name="emailaddress" placeholder="enter email here" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> d5c5478c21cc6f76dcdf883a6d80def18688e22a
 		</div>
 		<div id="state_select">
 			<label for="state">State of Residence: </label> <select name="state">
@@ -89,10 +85,12 @@
 				<option value="WV">West Virginia</option>
 				<option value="WI">Wisconsin</option>
 				<option value="WY">Wyoming</option>
-
 			</select>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d5c5478c21cc6f76dcdf883a6d80def18688e22a
 		</div>
 		<div id="activity_level">
 			<label for="activitylevel">Activity Level</label> <input type="radio"
@@ -104,9 +102,12 @@
 		</div>
 </form:form>
 
+<<<<<<< HEAD
 	</div>
 
+=======
+		</form>
+	</div>
+>>>>>>> d5c5478c21cc6f76dcdf883a6d80def18688e22a
 </body>
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
-
-</html>
