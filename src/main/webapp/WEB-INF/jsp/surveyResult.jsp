@@ -1,23 +1,26 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@include file="common/header.jsp"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>National Parks Survey Results</title>
-<%-- <link rel="stylesheet" href="css/site.css"></link> --%>
-</head>
-<body>
-	<div id="main_content">
-		<h1>National Parks Survey Results</h1>
-		<ul>
-			<c:forEach items="${surveyResults}" var="surveyResults">
-				<li><c:out value="${surveyResults.parkcode}" /></li>
-				<li><c:out value="${surveyResults.emailaddress}" /></li>
-				<li><c:out value="${surveyResults.state}" /></li>
-				<li><c:out value="${surveyResults.activitylevel}" /></li>				
-			</c:forEach>
-		</ul>
-	</div>
-</body>
-</html>
+<table class="topParksTable">
+		<tr> 
+			<th>&nbsp;</th> <th>&nbsp;</th> <th>Number of responses</th>
+		</tr>
+	<c:forEach items="${topParks}" var="park">
+
+		<tr> 
+			<td class="congratsImage"> 
+				<c:url var="imageLink" value="/img/parks/${park.key.toLowerCase() }.jpg" />
+				<img src="${imageLink }" class="congratsImage"/>
+			</td>
+			<td>
+				<c:out value="${parkList[park.key].parkname}"/>
+			</td>
+			<td>
+				<c:out value="${park.value }" />
+			</td>
+		</tr>	
+
+	</c:forEach>
+</table>
+<c:import url="/WEB-INF/jsp/common/footer.jsp" />
+
