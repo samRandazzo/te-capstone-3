@@ -11,7 +11,7 @@ public class Weather {
 
 	public String getParkcode() {
 		return parkcode;
-	}
+	}	
 
 	public void setParkcode(String parkcode) {
 		this.parkcode = parkcode;
@@ -116,7 +116,6 @@ public class Weather {
 
 	public String getParsedForecast() {
 		String parsedForecast = forecast.replaceAll("\\s","");
-
 		return parsedForecast;
 	}
 
