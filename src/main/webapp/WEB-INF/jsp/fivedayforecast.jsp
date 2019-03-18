@@ -35,7 +35,8 @@
 			<tr id="tileWeather">
 				<td class="weatherImg"><c:url var="weatherImage"
 						value="/img/weather/${dailyForecast.parsedForecast}.png" /> <img
-					src="${weatherImage}" /> <c:choose>
+					src="${weatherImage}" /> </td>
+					<c:choose>
 						<c:when test="${celsius == true}">
 							<td class="tileData">High: <c:out
 									value="${(dailyForecast.high - 32) / 1.8}" /> C

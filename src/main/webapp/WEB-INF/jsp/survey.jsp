@@ -20,7 +20,7 @@
 			<option value="YNP2">Yosemite National Park</option>
 
 		</select>
-	</form>
+	
 
 	</div>
 	<div id="email_Input">
@@ -91,7 +91,7 @@
 		<input type="radio" name="activitylevel" value="Active">Active
 		<input type="radio" name="activitylevel" value="Extremely Active ">Extremely
 		Active <input type="submit">
-
+	</form>
 	</div>
 
 
