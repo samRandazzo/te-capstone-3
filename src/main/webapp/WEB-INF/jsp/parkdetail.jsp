@@ -5,11 +5,11 @@
 	<div id="main_content">
 		<h2 class="title">
 
-				<c:out value="${park.parkname}" />
-				<c:out value="${park.state}" />
+				<span class="detailsName"><c:out value="${park.parkname}" /></span>
+				<span class="detailState"><c:out value="${park.state}" /></span>
 			
 		</h2>
-		<div id="img">
+		<div id="detailsImg">
 			<c:url var="parkImg"
 				value="/img/parks/${park.parkcode.toLowerCase()}.jpg" />
 			<img src="${parkImg}" />

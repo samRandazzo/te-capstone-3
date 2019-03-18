@@ -59,7 +59,7 @@ body {
 	flex-wrap: wrap;
 }
 
-#homeTable {
+#table {
 	border-radius: 200px;
 }
 
@@ -70,26 +70,23 @@ body {
 
 #tile {
 	width: 30%;
-	margin: 10%;
-	height: 100%;
+	margin: 20%;
+	height: 25%;
 	border-radius: 6px;
 	flex-grow: 1;
 }
 
-.tileImage {
-	object-fit: contain;
-	width: 100px;
+#image {
+	object-fit: fit;
+	width: auto;
 	border-radius: 6px;
 	background-color: #2f9eec;
 }
 
-#image {
-	border-radius: 6px;
-	object-fit: fill;
-}
+
 
 .tileData {
-
+	width: 50%;
 	min-height: 25px;
 	height: 15%;
 	display: flex;
@@ -114,8 +111,45 @@ body {
 
 #parkDescription {
 	padding-top: 100px;
-	font-size: 18px;
+	font-size: 18pt;
+	word-wrap: break-word;
 }
 
 /*************** Park Details Layout ******************/
+#main_content{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.title{
+	font-weight: bold;
+	margin:auto;
+}
+
+.detialsName{
+	text-align: center;
+}
+
+#detailsImg {
+	max-width: 100%;
+	height: auto;
+	
+}
+
+/*************** Five Day Forecast Layout *************/
+
+#tableWeather {
+	width: 65%;
+	
+}
+
+.weatherImg{
+	width: 65%;
+	height: auto;
+}
+
+.weatherData{
+	font-weight: bold;
+	font-size: 75%;
+}
 

@@ -5,13 +5,13 @@
 <h1 class="homeTitle">Welcome to National Park Geek!</h1>
 <div class="homeContainer">
 
-	<table id="homeTable">
+	<table id="table">
 		<c:forEach var="park" items="${parks}">
 			<c:url value="/parkdetail" var="parkHref">
 				<c:param name="parkcode" value="${park.parkcode}" />
 			</c:url>
 			<tr id="tile">
-				<td class="tileImage"><c:url var="parkImg"
+				<td class="tileData"><c:url var="parkImg"
 						value="/img/parks/${park.parkcode}" /> <a href="${parkHref}"><img
 						id="image" src="img/parks/${park.parkcode.toLowerCase()}.jpg" /></a></td>
 				
