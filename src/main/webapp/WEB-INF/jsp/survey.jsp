@@ -20,16 +20,15 @@
 			<option value="YNP2">Yosemite National Park</option>
 
 		</select>
-<<<<<<< HEAD
 	
-=======
->>>>>>> f916f919da75231eec36f0da8454118c8097d30a
 
 	</div>
 	<div id="email_Input">
 
 		<label for="emailaddress">Your email: </label> <input type="text"
 			id="email" name="emailaddress" placeholder="enter email here" />
+			<form:errors path="emailaddress" />
+			
 
 	</div>
 	<div id="state_select">
@@ -94,16 +93,7 @@
 		<input type="radio" name="activitylevel" value="Active">Active
 		<input type="radio" name="activitylevel" value="Extremely Active ">Extremely
 		Active <input type="submit">
-<<<<<<< HEAD
-	</form>
 	</div>
-=======
-
-	
->>>>>>> f916f919da75231eec36f0da8454118c8097d30a
-
-
 		</form>
 	</div>
-</div>
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />

@@ -1,5 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 
 <%@include file="common/header.jsp"%>
 <head>
@@ -15,27 +17,17 @@
 
 
 	<c:url value="/temperature" var="tempHref" />
-<<<<<<< HEAD
 
 	<form action="${tempHref}" method="GET">
-		<input type="hidden" name="fivedayforecastvalue" value="${fivedayforecastvalue}" /> 
-		<input type="hidden" name="parkcode" value="${park.parkcode}" /> 
-		<span> 
-			<input id="fahrenheit" type="submit" name="tempUnit" value="fahrenheit" />
+		<input type="hidden" name="fivedayforecastvalue"
+			value="${fivedayforecastvalue}" /> <input type="hidden"
+			name="parkcode" value="${park.parkcode}" /> <span> <input
+			id="fahrenheit" type="submit" name="tempUnit" value="fahrenheit" />
 			<input id="celsius" type="submit" name="tempUnit" value="celsius" />
 
 		</span>
 
 
-=======
-	<form action="${tempHref}">
-		<input type="hidden" name="fivedayforecast"
-			value="${fivedayforecast}" /> <input type="hidden"
-			name="parkcode" value="${park.parkcode}" /> <span> <input
-			id="fahrenheit" type="submit" name="tempUnit" value="Fahrenheit" />
-			<input id="celsius" type="submit" name="tempUnit" value="Celsius" />
-		</span>
->>>>>>> f916f919da75231eec36f0da8454118c8097d30a
 	</form>
 
 
@@ -45,53 +37,33 @@
 			<tr id="tileWeather">
 				<td class="weatherImg"><c:url var="weatherImage"
 						value="/img/weather/${dailyForecast.parsedForecast}.png" /> <img
-					src="${weatherImage}" /> </td>
-<<<<<<< HEAD
-					<c:choose>
-						<c:when test="${celsius == true}">
-							<td class="tileData">High: <c:out
-									value="${(dailyForecast.high - 32) / 1.8}" /> C
-							</td>
+					src="${weatherImage}" /></td>
+				<c:choose>
+					<c:when test="${celsius == true}">
+						<td class="tileData">High: <fmt:formatNumber pattern="#0.00" value="${(dailyForecast.high - 32) / 1.8}" />
+ C
+						</td>
 
-							<td class="tileData">Low: <c:out
-									value="${(dailyForecast.low - 32) / 1.8}" /> C
-							</td>
+						<td class="tileData">Low: <fmt:formatNumber pattern="#0.00" value="${(dailyForecast.low - 32) / 1.8}" />C
+						</td>
 
-						</c:when>
-						<c:otherwise>
-							<td class="tileData">High: <c:out
-									value="${dailyForecast.high}" /> F
-							</td>
+					</c:when>
+					<c:otherwise>
+						<td class="tileData">High: <c:out
+								value="${dailyForecast.high}" /> F
+						</td>
 
-							<td class="tileData">Low: <c:out
-									value="${dailyForecast.low}" /> F
-							</td>
-						</c:otherwise>
+						<td class="tileData">Low: <c:out value="${dailyForecast.low}" />
+							F
+						</td>
+					</c:otherwise>
 
-					</c:choose>
-											<td class="tileData"><c:out value="${dailyForecast.weatherMessage}" /></td>
-					
+				</c:choose>
+				<td class="tileData"><c:out
+						value="${dailyForecast.weatherMessage}" /></td>
+
 			</tr>
 
-=======
-					
-					<c:choose>
-						<c:when test="${celsius = true}">
-							<td><c:out value="${(dailyForecast.high - 32) / 1.8}" /></td>
-
-							<td><c:out value="${(dailyForecast.low - 32) / 1.8}" /></td>
-
-						</c:when>
-						<c:otherwise>
-							<td><c:out value="${dailyForecast.high}" /></td>
-
-							<td><c:out value="${dailyForecast.low}" /></td>
-						</c:otherwise>
-
-					</c:choose>
-				<td><c:out value="${dailyForecast.weatherMessage}" /></td>
-			</tr>
->>>>>>> f916f919da75231eec36f0da8454118c8097d30a
 		</table>
 
 

@@ -1,11 +1,18 @@
 package com.techelevator.model;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+
 public class Survey {
 
 	private long surveyid;
 	private String parkcode;
+	@NotBlank(message="Email is required") @Email(message="Not a valid Email address")
 	private String emailaddress;
 	private String state;
+	@NotNull(message="Please select an activity level")
 	private String activitylevel;
 
 	public long getSurveyid() {

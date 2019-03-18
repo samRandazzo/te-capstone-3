@@ -119,4 +119,5 @@ public class Weather {
 		return parsedForecast;
 	}
 
+	
 }
