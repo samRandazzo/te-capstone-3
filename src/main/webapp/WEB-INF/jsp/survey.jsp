@@ -20,7 +20,7 @@
 			<option value="YNP2">Yosemite National Park</option>
 
 		</select>
-	
+
 
 	</div>
 	<div id="email_Input">
@@ -94,6 +94,11 @@
 		<input type="radio" name="activitylevel" value="Extremely Active ">Extremely
 		Active <input type="submit">
 	</div>
+
+	
+
+
+
 		</form>
 	</div>
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
