@@ -41,22 +41,12 @@ public class WeatherController {
 		return "fivedayforecast";
 	}
 	
-<<<<<<< HEAD
-	@RequestMapping(path="/temperature", method=RequestMethod.GET)
 
-	public String setTemperature(@RequestParam String parkcode,  @RequestParam String tempUnit, ModelMap model){
-		model.addAttribute("parkcode", parkcode);
-		
-
-	
-		if(tempUnit.equals("fahrenheit")) {
-=======
 	@RequestMapping(path="/temperature", method=RequestMethod.GET)		
 	public String setTemperature(@RequestParam String parkcode, @RequestParam String tempUnit, ModelMap model){
 		model.addAttribute("parkcode", parkcode);
 	
 		if(tempUnit.equalsIgnoreCase("Fahrenheit")) {
->>>>>>> f916f919da75231eec36f0da8454118c8097d30a
 			celsius = false;
 		} else {
 			celsius = true;

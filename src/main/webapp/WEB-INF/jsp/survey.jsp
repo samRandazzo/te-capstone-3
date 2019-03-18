@@ -20,10 +20,7 @@
 			<option value="YNP2">Yosemite National Park</option>
 
 		</select>
-<<<<<<< HEAD
-	
-=======
->>>>>>> f916f919da75231eec36f0da8454118c8097d30a
+
 
 	</div>
 	<div id="email_Input">
@@ -94,13 +91,10 @@
 		<input type="radio" name="activitylevel" value="Active">Active
 		<input type="radio" name="activitylevel" value="Extremely Active ">Extremely
 		Active <input type="submit">
-<<<<<<< HEAD
-	</form>
-	</div>
-=======
 
 	
->>>>>>> f916f919da75231eec36f0da8454118c8097d30a
+	</div>
+
 
 
 		</form>
