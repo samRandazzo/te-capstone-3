@@ -86,19 +86,19 @@ body {
 
 
 .tileData {
-	width: 50%;
+	width: 60%;
 	min-height: 25px;
 	height: 15%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: left;
 	background-color: white;
 }
 
 #parkName {
 	font-weight: bold;
 	margin: auto;
-	padding: 5px;
+	float: left;
 	font-size: 30px;
 }
 
@@ -106,6 +106,7 @@ body {
 	padding-bottom: 5px;
 	margin: auto;
 	font-weight: bold;
+	float: left;
 	font-size: 20px;
 }
 
@@ -133,7 +134,7 @@ body {
 #detailsImg {
 	max-width: 100%;
 	height: auto;
-	
+	float:left;
 }
 
 /*************** Five Day Forecast Layout *************/

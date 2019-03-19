@@ -28,10 +28,8 @@
 		</span>
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 32a86b86a95534c857abf6e7f1bff66f3ee4f51a
+
 	</form>
 
 
@@ -41,7 +39,7 @@
 			<tr id="tileWeather">
 				<td class="weatherImg"><c:url var="weatherImage"
 						value="/img/weather/${dailyForecast.parsedForecast}.png" /> <img
-<<<<<<< HEAD
+
 					src="${weatherImage}" /></td>
 				<c:choose>
 					<c:when test="${celsius == true}">
@@ -68,7 +66,6 @@
 						value="${dailyForecast.weatherMessage}" /></td>
 
 			</tr>
-=======
 					src="${weatherImage}" /> </td>
 					<c:choose>
 						<c:when test="${celsius == true}">
@@ -96,7 +93,6 @@
 					
 			</tr>
 
->>>>>>> 32a86b86a95534c857abf6e7f1bff66f3ee4f51a
 
 		</table>
 

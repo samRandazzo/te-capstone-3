@@ -3,6 +3,7 @@
 
 <div id="main_content">
 	<h1 class="title">National Parks Survey Page</h1>
+	
 	<div id="park_select">
 		<c:url var="submitSurvey" value="/survey" />
 		<form method="POST" action="${submitSurvey}" modelAttribute="survey" />
@@ -92,7 +93,10 @@
 			type="radio" name="activitylevel" value="sedentary">Sedentary
 		<input type="radio" name="activitylevel" value="Active">Active
 		<input type="radio" name="activitylevel" value="Extremely Active ">Extremely
-		Active <input type="submit">
+		Active 
+		<div class="submitButton">
+		<input type="submit">
+		</div>
 	</div>
 
 	
